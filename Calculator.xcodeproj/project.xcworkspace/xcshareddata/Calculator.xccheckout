@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4AA686FE-C3EC-4E17-BE37-822E5494DF68</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Calculator</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>975A10756674D147A747832824DD75B4EFEE44C3</key>
 		<string>https://github.com/domirin/Calculator.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Calculator.xcodeproj</string>
+	<string>Calculator.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>975A10756674D147A747832824DD75B4EFEE44C3</key>

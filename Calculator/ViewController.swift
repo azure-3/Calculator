@@ -21,11 +21,8 @@ class ViewController: UIViewController {
     var answernum:Int=0
     var operation:Int=0
     var ope:Int=0
+    var count:Int=0
     
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,9 +34,9 @@ class ViewController: UIViewController {
     }
     @IBAction func select0(){
         if ope==0{
-            number=number*10+0
-            label.text=String("\(number)")
-            update()
+                number=number*10+0
+                label.text=String("\(number)")
+                update()
         }else{
             number=number*10+0
             label2.text=String("\(number)")
@@ -48,9 +45,9 @@ class ViewController: UIViewController {
     }
     @IBAction func select1(){
         if ope==0{
-            number=number*10+1
-            label.text=String("\(number)")
-            update()
+                number=number*10+1
+                label.text=String("\(number)")
+                update()
         }else{
             number=number*10+1
             label2.text=String("\(number)")
@@ -60,9 +57,9 @@ class ViewController: UIViewController {
     }
     @IBAction func select2(){
         if ope==0{
-            number=number*10+2
-            label.text=String("\(number)")
-            update()
+                number=number*10+2
+                label.text=String("\(number)")
+                update()
         }else{
             number=number*10+2
             label2.text=String("\(number)")
@@ -71,9 +68,9 @@ class ViewController: UIViewController {
     }
     @IBAction func select3(){
         if ope==0{
-            number=number*10+3
-            label.text=String("\(number)")
-            update()
+                number=number*10+3
+                label.text=String("\(number)")
+                update()
         }else{
             number=number*10+3
             label2.text=String("\(number)")
@@ -83,45 +80,42 @@ class ViewController: UIViewController {
     }
     @IBAction func select4(){
         if ope==0{
-            number=number*10+4
-            label.text=String("\(number)")
-            update()
+                number=number*10+4
+                label.text=String("\(number)")
+                update()
         }else{
             number=number*10+4
             label2.text=String("\(number)")
             update2()
         }
-
     }
     @IBAction func select5(){
         if ope==0{
-            number=number*10+5
-            label.text=String("\(number)")
-            update()
+                number=number*10+5
+                label.text=String("\(number)")
+                update()
         }else{
             number=number*10+5
             label2.text=String("\(number)")
             update2()
         }
-
     }
     @IBAction func select6(){
         if ope==0{
-            number=number*10+6
-            label.text=String("\(number)")
-            update()
+                number=number*10+6
+                label.text=String("\(number)")
+                update()
         }else{
             number=number*10+6
             label2.text=String("\(number)")
             update2()
         }
-
     }
     @IBAction func select7(){
         if ope==0{
-            number=number*10+7
-            label.text=String("\(number)")
-            update()
+                number=number*10+7
+                label.text=String("\(number)")
+                update()
         }else{
             number=number*10+7
             label2.text=String("\(number)")
@@ -130,21 +124,20 @@ class ViewController: UIViewController {
     }
     @IBAction func select8(){
         if ope==0{
-            number=number*10+8
-            label.text=String("\(number)")
-            update()
-        }else{
+                number=number*10+8
+                label.text=String("\(number)")
+                update()
+         }else{
             number=number*10+8
             label2.text=String("\(number)")
             update2()
         }
-
     }
     @IBAction func select9(){
         if ope==0{
-            number=number*10+9
-            label.text=String("\(number)")
-            update()
+                 number=number*10+9
+                label.text=String("\(number)")
+                update()
         }else{
             number=number*10+9
             label2.text=String("\(number)")
@@ -152,50 +145,82 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func plus(){
-        operationex.text=String("+")
-        operation=1
-        number2=number
-        number=0
-        ope=1
+        if count==0{
+            operationex.text=String("+")
+            operation=1
+            number2=number
+            number=0
+            ope=1
+        }else{
+            operationex.text=String("+")
+            operation=1
+            conti()
+        }
     }
     @IBAction func minus(){
-        operationex.text=String("-")
-        operation=2
-        number2=number
-        number=0
-        ope=1
+        if count==0{
+            operationex.text=String("-")
+            operation=2
+            number2=number
+            number=0
+            ope=1
+        }else{
+            operationex.text=String("-")
+            operation=2
+            conti()
+        }
     }
     @IBAction func kakeru(){
-        operationex.text=String("×")
-        operation=3
-        number2=number
-        number=0
-        ope=1
+        if count==0{
+            operationex.text=String("×")
+            operation=3
+            number2=number
+            number=0
+            ope=1
+        }else{
+            operationex.text=String("×")
+            operation=3
+            conti()
+        }
     }
     @IBAction func waru(){
-        operationex.text=String("÷")
-        operation=4
-        number2=number
-        number=0
-        ope=1
+        if count==0{
+            operationex.text=String("÷")
+            operation=4
+            number2=number
+            number=0
+            ope=1
+        }else{
+            operationex.text=String("÷")
+            operation=4
+            conti()
+        }
     }
     @IBAction func equal(){
         if operation==1{
             label3.text=String("\(number2+number)")
             answer=(number2+number)
             update3()
+            count=1
+            ope=0
         }else if operation==2{
             label3.text=String("\(number2-number)")
             answer=(number2-number)
             update3()
+            count=1
+            ope=0
         }else if operation==3{
             label3.text=String("\(number2*number)")
             answer=number2*number
             update3()
+            count=1
+            ope=1
         }else if operation==4{
             label3.text=String("\(number2/number)")
             answer=(number2/number)
             update3()
+            count=1
+            ope=1
         }
         
     }
@@ -207,6 +232,7 @@ class ViewController: UIViewController {
         label3.text=String(0)
         operationex.text=String("?")
         ope=0
+
     }
     func update(){
         if number==round(number){
@@ -230,8 +256,21 @@ class ViewController: UIViewController {
             answernum=Int(answer)
             label3.text=String(answernum)
         }else{
-            label3.text=String("\(answernum)")
+            label3.text=String("\(answer)")
         }
+    }
+    func conti(){
+        number=answer
+        number2=number
+        label.text=String("\(answer)")
+        label2.text=String(0)
+        label3.text=String(0)
+        count=0
+        ope=1
+        update()
+        answer=0
+        number=0
+
     }
     
 }
